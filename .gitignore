@@ -1,0 +1,7 @@
+data_voc/
+**/venv
+**/.idea
+
+__pycache__/
+*.py[cod]
+*$py.classgit add
