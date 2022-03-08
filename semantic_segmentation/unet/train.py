@@ -34,8 +34,8 @@ if __name__ == '__main__':
 
     callback = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=3)
 
-    train = CarvanaDataset(TRAIN_IMG_DIR, TRAIN_MASK_DIR, train_transform)
-    valid = CarvanaDataset(VAL_IMG_DIR, VAL_MASK_DIR, train_transform)
+    train = CarvanaDataset(TRAIN_IMG_DIR, TRAIN_MASK_DIR, transform=train_transform)
+    valid = CarvanaDataset(VAL_IMG_DIR, VAL_MASK_DIR, transform=train_transform)
 
     # fit the generators
     history = model.fit(
